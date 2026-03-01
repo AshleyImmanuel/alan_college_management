@@ -4,6 +4,10 @@ This repository contains both:
 - `frontend` (React app)
 - `backend` (Node.js + Express API)
 
+Deployment guides:
+- Local setup (this file)
+- [AWS deployment](AWS.md)
+
 ## Prerequisites
 
 - Node.js 18+ (or newer)
