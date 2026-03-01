@@ -1,0 +1,148 @@
+.leave-panel-stack {
+    display: grid;
+    gap: 20px;
+}
+
+.leave-panel-stack .faculty-panel {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.leave-panel-stack .faculty-panel-header {
+    padding: 16px 20px;
+    border-bottom: 1px solid #f1f5f9;
+    background: #f9fafb;
+}
+
+.leave-panel-stack .faculty-panel-header h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1f2937;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.leave-panel-stack .faculty-panel-body {
+    padding: 18px 20px;
+}
+
+.leave-apply-panel {
+    border-color: #dbeafe;
+}
+
+.leave-form-grid {
+    display: grid;
+    grid-template-columns: minmax(220px, 1fr) repeat(2, minmax(150px, 220px));
+    gap: 12px;
+    align-items: end;
+}
+
+.leave-reason-field {
+    grid-column: 1 / -1;
+}
+
+.leave-reason-field textarea {
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    padding: 10px 12px;
+    font-size: 0.9rem;
+    background: #fff;
+    color: #111827;
+    resize: vertical;
+    min-height: 88px;
+}
+
+.leave-helper-note {
+    grid-column: 1 / -1;
+    margin-top: -2px;
+    color: #475569;
+    font-size: 0.86rem;
+}
+
+.leave-action-row {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.leave-inbox-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.leave-panel-stack .faculty-status-filters {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.leave-panel-stack .faculty-status-filter-btn {
+    border: 1px solid #d1d5db;
+    background: #ffffff;
+    color: #475569;
+    border-radius: 999px;
+    padding: 6px 12px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.leave-panel-stack .faculty-status-filter-btn.active {
+    border-color: #4f46e5;
+    background: #eef2ff;
+    color: #3730a3;
+}
+
+.leave-panel-stack .faculty-registration-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.leave-panel-stack .btn-small {
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #374151;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.leave-panel-stack .faculty-btn-accept {
+    border-color: #86efac;
+    color: #166534;
+    background: #f0fdf4;
+}
+
+.leave-panel-stack .faculty-btn-reject {
+    border-color: #fecaca;
+    color: #991b1b;
+    background: #fef2f2;
+}
+
+.leave-reason-cell {
+    max-width: 360px;
+    white-space: normal;
+    word-break: break-word;
+}
+
+@media (max-width: 900px) {
+    .leave-form-grid {
+        grid-template-columns: 1fr;
+    }
+}

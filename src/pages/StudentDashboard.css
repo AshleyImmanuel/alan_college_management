@@ -1,0 +1,23 @@
+.student-inline-error {
+    margin-top: 16px;
+    background: #fee2e2;
+    color: #b91c1c;
+    border: 1px solid #fecaca;
+    border-radius: 10px;
+    padding: 12px 14px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.student-materials-panels .faculty-panel:first-child .faculty-panel-header {
+    background: #f9fafb;
+}
+
+.student-materials-panels .faculty-panel:last-child .faculty-panel-header {
+    background: #f0f9ff;
+    border-bottom: 1px solid #dbeafe;
+}
+
+.student-materials-panels .materials-grid {
+    margin-top: 0;
+}

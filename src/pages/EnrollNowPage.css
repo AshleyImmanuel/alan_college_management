@@ -1,0 +1,515 @@
+/* Variables & Base for Enroll Page */
+.enroll-page-wrapper {
+    background-color: #f9fafb;
+    /* Light clean gray background */
+    font-family: var(--font-body, 'Inter', sans-serif);
+}
+
+/* Hero Section */
+.enroll-hero {
+    position: relative;
+    padding: 160px 0 120px;
+    background-size: cover;
+    background-position: center;
+    background-color: #0f243f;
+    /* Fallback dark blue */
+    display: flex;
+    align-items: center;
+}
+
+.enroll-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(15, 36, 63, 0.9) 0%, rgba(15, 36, 63, 0.6) 100%);
+    z-index: 1;
+}
+
+.enroll-hero-content {
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.enroll-tag {
+    display: inline-block;
+    color: #fbd34d;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+}
+
+.enroll-hero-content h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 24px;
+}
+
+.enroll-hero-content p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* General Layout Options */
+.enroll-main {
+    padding: 80px 0 0;
+}
+
+.enroll-section {
+    margin-bottom: 0;
+    padding-bottom: 80px;
+}
+
+.enroll-section-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 50px;
+}
+
+.enroll-section-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #0f243f;
+    margin-bottom: 16px;
+}
+
+.enroll-section-header p {
+    font-size: 1.1rem;
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+/* Process Steps Grid */
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.process-card {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+    border-left: 5px solid #facc15;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.process-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(15, 36, 63, 0.12);
+    border-left-color: #0f243f;
+}
+
+.process-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #facc15;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.process-card:hover::before {
+    transform: scaleX(1);
+}
+
+.step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: #0f243f;
+    color: #facc15;
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    line-height: 1;
+}
+
+.process-card h3 {
+    font-size: 1.4rem;
+    color: #0f243f;
+    margin-bottom: 16px;
+    position: relative;
+    z-index: 1;
+}
+
+.process-card p {
+    color: #6b7280;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Premium Rules Section Layout */
+.rules-section-premium {
+    background-color: #0f243f;
+    padding: 100px 0;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0;
+    box-shadow: none;
+    width: 100%;
+}
+
+.rules-section-premium::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(59, 130, 246, 0.1) 0%, transparent 40%);
+    pointer-events: none;
+}
+
+.rules-header-premium {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 60px;
+    position: relative;
+    z-index: 2;
+}
+
+.rules-header-premium .enroll-accent {
+    color: #fbd34d;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+    display: inline-block;
+}
+
+.rules-header-premium h2 {
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.rules-header-premium p {
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.6;
+}
+
+.rules-premium-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+.rule-premium-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), background 0.4s ease, border-color 0.4s ease;
+}
+
+.rule-premium-card:hover {
+    transform: translateY(-12px);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(250, 204, 21, 0.4);
+    /* golden border on hover */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.rule-icon-wrapper {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 24px;
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #ffffff;
+    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), background 0.4s ease;
+}
+
+.rule-premium-card:hover .rule-icon-wrapper {
+    transform: scale(1.15) rotate(10deg);
+    background: linear-gradient(135deg, #facc15 0%, #eab308 100%);
+    box-shadow: 0 10px 20px rgba(250, 204, 21, 0.3);
+    color: #0f243f;
+}
+
+.rule-premium-card h3 {
+    font-size: 1.3rem;
+    color: #ffffff;
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+.rule-premium-card p {
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Call to Action Section */
+.enroll-cta-section {
+    background: #f0f2f5;
+    padding: 60px 0;
+    width: 100%;
+}
+
+.enroll-cta-wrapper {
+    background: #0f243f;
+    border-radius: 20px;
+    padding: 70px 40px;
+    text-align: center;
+    color: #ffffff;
+    box-shadow: 0 16px 40px rgba(15, 36, 63, 0.25);
+    position: relative;
+    overflow: hidden;
+}
+
+.enroll-cta-wrapper::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.15) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.enroll-cta-wrapper {
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+    z-index: 2;
+}
+
+.enroll-cta-wrapper h2 {
+    font-size: clamp(2rem, 3vw, 2.5rem);
+    font-weight: 700;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.enroll-cta-wrapper p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 600px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+    position: relative;
+    z-index: 2;
+}
+
+.enroll-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.btn-large {
+    padding: 16px 32px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.enroll-actions .btn-primary {
+    background-color: #facc15;
+    color: #111827;
+}
+
+.enroll-actions .btn-primary:hover {
+    background-color: #eab308;
+    transform: translateY(-2px);
+}
+
+.enroll-actions .btn-outline {
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.enroll-actions .btn-outline:hover {
+    border-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Overrides */
+@media (max-width: 900px) {
+    .rules-section-premium {
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .enroll-actions {
+        flex-direction: column;
+    }
+
+    .btn-large {
+        width: 100%;
+    }
+
+    .enroll-cta-wrapper {
+        padding: 60px 20px;
+    }
+}
+
+.enquiry-contact-section {
+    padding-bottom: 80px;
+}
+
+.enquiry-contact-grid {
+    display: grid;
+    grid-template-columns: minmax(260px, 1fr) minmax(340px, 1.35fr);
+    gap: 26px;
+}
+
+.enquiry-info-card {
+    background: #0f243f;
+    color: #ffffff;
+    border-radius: 16px;
+    padding: 28px;
+}
+
+.enquiry-info-card h2 {
+    margin: 0 0 12px;
+    font-size: 1.7rem;
+}
+
+.enquiry-info-card p {
+    margin: 0 0 16px;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.6;
+}
+
+.enquiry-contact-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 10px;
+}
+
+.enquiry-contact-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.95rem;
+}
+
+.enquiry-contact-list i {
+    margin-top: 2px;
+    color: #facc15;
+}
+
+.enquiry-form-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: 0 10px 30px rgba(15, 36, 63, 0.08);
+}
+
+.enquiry-form-card h3 {
+    margin: 0 0 14px;
+    color: #0f243f;
+}
+
+.enquiry-success {
+    margin-bottom: 12px;
+    border: 1px solid #86efac;
+    background: #dcfce7;
+    color: #166534;
+    border-radius: 10px;
+    padding: 10px 12px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.enquiry-form {
+    display: grid;
+    gap: 12px;
+}
+
+.enquiry-form-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.enquiry-field {
+    display: grid;
+    gap: 6px;
+}
+
+.enquiry-field label {
+    color: #0f243f;
+    font-size: 0.82rem;
+    font-weight: 700;
+}
+
+.enquiry-field input,
+.enquiry-field textarea {
+    width: 100%;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    padding: 10px 12px;
+    font-size: 0.95rem;
+    color: #111827;
+    background: #ffffff;
+}
+
+.enquiry-field textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.enquiry-submit-btn {
+    justify-self: start;
+}
+
+@media (max-width: 900px) {
+    .enquiry-contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .enquiry-form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .enquiry-form-card,
+    .enquiry-info-card {
+        padding: 20px;
+    }
+}

@@ -1,0 +1,459 @@
+/* Login Page Styles */
+.login-page-wrapper {
+    background: #f0f2f5;
+    min-height: 100vh;
+}
+
+/* Hero */
+.login-hero {
+    position: relative;
+    padding: 120px 0 60px;
+    background: #0f243f;
+    text-align: center;
+    overflow: hidden;
+}
+
+.login-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.15) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.login-hero-content {
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+}
+
+.login-hero-content h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.login-hero-content p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Main */
+.login-main {
+    padding: 0 0 60px;
+    margin-top: -30px;
+    position: relative;
+    z-index: 3;
+}
+
+/* Card */
+.login-card {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.08);
+    max-width: 500px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* Tabs */
+.login-tabs {
+    display: flex;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 18px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #6b7280;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease, border-color 0.3s ease;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+}
+
+.tab-btn.active {
+    color: #0f243f;
+    border-bottom-color: #facc15;
+}
+
+.tab-btn:hover:not(.active) {
+    color: #374151;
+}
+
+/* Form */
+.login-form {
+    padding: 28px 32px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    min-width: 0;
+}
+
+.form-row .form-group {
+    min-width: 0;
+}
+
+.form-row .input-wrapper {
+    min-width: 0;
+}
+
+@media (max-width: 520px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+.form-group {
+    margin-bottom: 14px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    border: 1.5px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 0 12px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background: #f9fafb;
+}
+
+.input-wrapper:focus-within {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    background: #ffffff;
+}
+
+.input-wrapper i {
+    color: #9ca3af;
+    font-size: 0.9rem;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+.input-wrapper:focus-within i {
+    color: #3b82f6;
+}
+
+.input-wrapper input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 11px 0;
+    font-size: 0.95rem;
+    color: #1f2937;
+    outline: none;
+    font-family: inherit;
+}
+
+.input-wrapper input::placeholder {
+    color: #9ca3af;
+}
+
+/* Password Toggle */
+.pw-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0 4px;
+    color: #9ca3af;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+    flex-shrink: 0;
+}
+
+.pw-toggle:hover {
+    color: #3b82f6;
+}
+
+.input-wrapper select {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 11px 28px 11px 0;
+    font-size: 0.95rem;
+    color: #1f2937;
+    outline: none;
+    font-family: inherit;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Custom dropdown arrow */
+.input-wrapper:has(select) {
+    position: relative;
+}
+
+.input-wrapper:has(select)::after {
+    content: '';
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #6b7280;
+    pointer-events: none;
+    transition: transform 0.2s ease;
+}
+
+.input-wrapper:focus-within:has(select)::after {
+    border-top-color: #3b82f6;
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.input-wrapper select:invalid,
+.input-wrapper select option[value=""] {
+    color: #9ca3af;
+}
+
+.input-wrapper select option {
+    background: #ffffff;
+    color: #1f2937;
+    padding: 10px;
+    font-size: 0.95rem;
+}
+
+/* Options */
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    font-size: 0.9rem;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #4b5563;
+    cursor: pointer;
+}
+
+.remember-me input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #3b82f6;
+    cursor: pointer;
+}
+
+.remember-me a {
+    color: #3b82f6;
+    font-weight: 600;
+}
+
+.forgot-link {
+    color: #3b82f6;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.forgot-link:hover {
+    color: #2563eb;
+}
+
+/* Submit */
+.btn-submit {
+    width: 100%;
+    padding: 16px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #0f243f;
+    background: #facc15;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    font-family: inherit;
+}
+
+.btn-submit:hover {
+    background: #eab308;
+    transform: translateY(-1px);
+}
+
+/* Divider */
+.form-divider {
+    text-align: center;
+    margin: 24px 0;
+    position: relative;
+}
+
+.form-divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #e5e7eb;
+}
+
+.form-divider span {
+    position: relative;
+    background: #ffffff;
+    padding: 0 16px;
+    color: #9ca3af;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* Social */
+.social-login {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px;
+    border: 2px solid #e5e7eb;
+    border-radius: 10px;
+    background: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #374151;
+    cursor: pointer;
+    transition: border-color 0.3s ease, background 0.3s ease;
+    font-family: inherit;
+}
+
+.social-btn:hover {
+    border-color: #d1d5db;
+    background: #f9fafb;
+}
+
+.social-btn i {
+    font-size: 1.1rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .login-card {
+        margin: 0 16px;
+    }
+
+    .login-form {
+        padding: 24px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .social-login {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Toast Notification */
+.toast-notification {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-left: 5px solid #22c55e;
+    border-radius: 12px;
+    padding: 20px 24px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    max-width: 420px;
+    z-index: 9999;
+    animation: toastSlideIn 0.4s ease;
+}
+
+@keyframes toastSlideIn {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.toast-icon {
+    font-size: 1.4rem;
+    color: #22c55e;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.toast-content {
+    flex: 1;
+}
+
+.toast-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 4px;
+}
+
+.toast-message {
+    font-size: 0.85rem;
+    color: #6b7280;
+    line-height: 1.5;
+}
+
+.toast-close {
+    background: none;
+    border: none;
+    color: #9ca3af;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0;
+    flex-shrink: 0;
+    transition: color 0.2s ease;
+}
+
+.toast-close:hover {
+    color: #374151;
+}
+
+/* Error Toast */
+.toast-error {
+    border-left-color: #ef4444;
+}
+
+.toast-error .toast-icon {
+    color: #ef4444;
+}
+
+@media (max-width: 480px) {
+    .toast-notification {
+        left: 16px;
+        right: 16px;
+        bottom: 16px;
+        max-width: none;
+    }
+}

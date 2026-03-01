@@ -1,0 +1,168 @@
+/* Terms Page Styles */
+.terms-page-wrapper {
+    background: #f0f2f5;
+    min-height: 100vh;
+}
+
+/* Hero */
+.terms-hero {
+    position: relative;
+    padding: 120px 0 60px;
+    background: #0f243f;
+    text-align: center;
+    overflow: hidden;
+}
+
+.terms-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.15) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.terms-hero-content {
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+}
+
+.terms-hero-content h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.terms-hero-content p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Main */
+.terms-main {
+    padding: 0 0 60px;
+    margin-top: -20px;
+    position: relative;
+    z-index: 3;
+}
+
+/* Card */
+.terms-card {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.08);
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 48px;
+}
+
+.terms-updated {
+    font-size: 0.85rem;
+    color: #6b7280;
+    margin-bottom: 32px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* Sections */
+.terms-section {
+    margin-bottom: 32px;
+}
+
+.terms-section:last-child {
+    margin-bottom: 0;
+}
+
+.terms-section h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #0f243f;
+    margin-bottom: 12px;
+}
+
+.terms-section p {
+    font-size: 0.95rem;
+    color: #4b5563;
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+.terms-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+}
+
+.terms-section ul li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+.terms-section ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #facc15;
+}
+
+/* Contact Box */
+.terms-contact {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-left: 4px solid #facc15;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-top: 12px;
+}
+
+.terms-contact p {
+    margin-bottom: 4px;
+    font-size: 0.9rem;
+}
+
+/* Back Link */
+.terms-back {
+    margin-top: 36px;
+    padding-top: 24px;
+    border-top: 1px solid #e5e7eb;
+    text-align: center;
+}
+
+.terms-back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #3b82f6;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    transition: color 0.2s ease, gap 0.2s ease;
+}
+
+.terms-back-link:hover {
+    color: #1e40af;
+    gap: 12px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .terms-card {
+        margin: 0 16px;
+        padding: 28px 24px;
+    }
+
+    .terms-section h2 {
+        font-size: 1.1rem;
+    }
+}
