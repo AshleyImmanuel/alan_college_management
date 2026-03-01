@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# Parker College Management (Full Stack)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains both:
+- `frontend` (React app)
+- `backend` (Node.js + Express API)
 
-## Available Scripts
+## Prerequisites
 
-In the project directory, you can run:
+- Node.js 18+ (or newer)
+- MongoDB running locally
 
-### `npm start`
+## 1) Clone and install
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```bash
+git clone https://github.com/AshleyImmanuel/alan_college_management.git
+cd alan_college_management
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Install backend deps:
 
-### `npm test`
+```bash
+cd backend
+npm install
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Install frontend deps:
 
-### `npm run build`
+```bash
+cd ../frontend
+npm install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 2) Configure backend env
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Create `backend/.env` from `backend/.env.example`:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```env
+MONGO_URI=mongodb://127.0.0.1:27017/parker_university
+JWT_SECRET=your_secret_here
+PORT=5000
+```
 
-### `npm run eject`
+Use your own local MongoDB URI if needed.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 3) Run app
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Start backend:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+cd backend
+npm start
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Start frontend in another terminal:
 
-## Learn More
+```bash
+cd frontend
+npm start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+App URLs:
+- Frontend: `http://localhost:3000`
+- Backend API: `http://localhost:5000`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Notes
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Frontend proxies API requests to `http://localhost:5000`.
+- Students/faculty/hod/admin workflows are included.
+- Leave request flow is role-based:
+  - student -> faculty
+  - faculty -> hod
+  - hod -> admin
